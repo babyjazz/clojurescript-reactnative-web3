@@ -50,6 +50,10 @@ rlwrap lein figwheel android
 react-native run-android
 ```
 
+### Issue
+
+This repo created for fix undefined 'crypto' module when using web3
+
 ### License
 
 MIT
