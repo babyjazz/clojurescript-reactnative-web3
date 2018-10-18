@@ -40,20 +40,23 @@ react-native link react-native-randombytes
 yarn add -D tradle/rn-nodeify
 ./node_modules/.bin/rn-nodeify --hack --install
 
-# edit index file (index.android.js or index.ios.js)
-# Add following command to top of file
-import './shim'   # Do not use require()
-import './global'
-import 'crypto'
+re-natal require ./shim.js android
+re-natal require ./global.js android
+re-natal require crypto android
+
+# Edit ios/android core.cljs at top of require package
+(js/require "./shim.js")
+(js/require "./global.js")
+(js/require "crypto")
 
 rlwrap lein figwheel android
 react-native run-android
 ```
 
-### Issue
+### build production
 
-This repo created for fix undefined 'crypto' module when using web3
+```
+lein prod-build
+```
 
-### License
-
-MIT
+then do following react native build production document

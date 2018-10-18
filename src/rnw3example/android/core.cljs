@@ -4,6 +4,9 @@
             [rnw3example.events]
             [rnw3example.subs]))
 
+(js/require "./shim.js")
+(js/require "./global.js")
+(js/require "crypto")
 (def ReactNative (js/require "react-native"))
 
 (def app-registry (.-AppRegistry ReactNative))
@@ -14,7 +17,7 @@
 (defn alert [title]
       (.alert (.-Alert ReactNative) title))
 
-(def web-url "URL_WEB3")
+(def web-url "http://161.246.11.135:8545")
 (def Web3 (js/require "web3"))
 (def web3 (new Web3))
 (.setProvider web3 (new web3.providers.HttpProvider web-url))

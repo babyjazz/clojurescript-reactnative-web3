@@ -1,25 +1,28 @@
 {
-  "name": "RNW3Example",
-  "interface": "reagent6",
-  "envRoots": {
-    "dev": "env/dev",
-    "prod": "env/prod"
-  },
-  "modules": [],
-  "imageDirs": [
-    "images"
-  ],
-  "platforms": {
-    "ios": {
-      "host": "localhost",
-      "modules": []
-    },
-    "android": {
-      "host": "localhost",
-      "modules": [
-        "web3"
-      ]
-    }
-  },
-  "autoRequire": false
+    "name": "RNW3Example",
+        "interface": "reagent6",
+        "envRoots": {
+            "dev": "env/dev",
+            "prod": "env/prod"
+        },
+        "modules": [],
+        "imageDirs": [
+            "images"
+        ],
+        "platforms": {
+            "ios": {
+                "host": "localhost",
+                "modules": []
+            },
+            "android": {
+                "host": "localhost",
+                "modules": [
+                    "./shim.js",
+                "./global.js",
+                "crypto",
+                "web3"
+                ]
+            }
+        },
+        "autoRequire": false
 }
