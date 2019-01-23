@@ -60,3 +60,10 @@ lein prod-build
 ```
 
 then do following react native build production document
+
+### NOTE
+You can use short installation by this following
+https://gist.github.com/dougbacelar/29e60920d8fa1982535247563eb63766
+and
+https://stackoverflow.com/questions/52697108/unable-to-resolve-module-crypto-in-reactnative/52698050#52698050
+and use (js/require "shim and global and crypto") instead of import
